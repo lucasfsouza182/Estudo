@@ -2,11 +2,14 @@ package com.estudo.pedidovenda.controller;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ViewScoped;
+import com.estudo.pedidovenda.service.NegocioException;
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
 
-@ManagedBean
-@ViewScoped
+
+
+@Named
+@RequestScoped
 public class CadastroPedidoBean {
 
 	private List<Integer> items;
@@ -15,6 +18,11 @@ public class CadastroPedidoBean {
 		items = new ArrayList<>();
 		items.add(1);
 	}
+	
+	public void salvar() {
+		throw new NegocioException("Pedido não pode ser salvo, pois ainda não foi implementado.");
+	}
+	
 
 	public List<Integer> getItems() {
 		return items;

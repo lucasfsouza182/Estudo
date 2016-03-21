@@ -2,11 +2,15 @@ package com.estudo.pedidovenda.controller;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.faces.bean.ManagedBean;
-import javax.faces.bean.RequestScoped;
 
-@ManagedBean
+import javax.enterprise.context.RequestScoped;
+import javax.inject.Named;
+
+
+
+@Named
 @RequestScoped
+
 public class PesquisaPedidosBean {
 
 	private List<Integer> pedidosFiltrados;
